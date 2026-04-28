@@ -4,6 +4,7 @@ import fish from "@/assets/food/fish.jpg";
 import pie from "@/assets/food/pie.jpg";
 import sausages from "@/assets/food/sausages.jpg";
 import foodDelivery from "@/assets/fooddelivery.png";
+import menuPdf from "@/assets/mow_flyer_april26.pdf";
 
 const testimonials = [
   {
@@ -40,7 +41,7 @@ const menuItems = [
   },
   {
     img: pie,
-    title: "Steak & Kidney Pie",
+    title: "Cottage Pie",
     desc: "Rich, slow-cooked filling in a buttery shortcrust pastry with seasonal veg",
   },
   {
@@ -73,10 +74,10 @@ export default function App() {
       <div className="bg-blue-950 text-white text-base px-6 py-3 flex items-center justify-between border-b-4 border-yellow-500">
         <span>Serving mid-Essex daily</span>
         <a
-          href="tel:01376297552"
+          href="tel:01376423462"
           className="font-bold text-yellow-400 hover:text-yellow-300 transition-colors tracking-wide"
         >
-          Tel: 01376 297 552
+          Tel: 01376 423 462
         </a>
       </div>
 
@@ -119,13 +120,15 @@ export default function App() {
             </p>
             <div className="flex flex-wrap gap-4">
               <a
-                href="tel:01376297552"
+                href="tel:01376423462"
                 className="btn btn-warning text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
               >
-                Call: 01376 297 552
+                Call: 01376 423 462
               </a>
               <a
-                href="#"
+                href={menuPdf}
+                target="_blank"
+                rel="noreferrer"
                 className="btn btn-outline text-white border-white hover:bg-white hover:text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
               >
                 See Our Menu
@@ -134,7 +137,6 @@ export default function App() {
           </div>
           <div className="hidden md:block shrink-0">
             <div className="relative" style={{ padding: "10px 0 0 10px" }}>
-              {/* Offset border behind the image */}
               <div
                 className="absolute inset-0"
                 style={{
@@ -229,7 +231,9 @@ export default function App() {
           </div>
           <div className="mt-4 text-right">
             <a
-              href="#"
+              href={menuPdf}
+              target="_blank"
+              rel="noreferrer"
               className="text-base font-bold text-blue-950 hover:text-yellow-600 transition-colors underline underline-offset-4"
             >
               View full menu &rsaquo;
@@ -260,10 +264,10 @@ export default function App() {
           <p className="mt-6 text-base text-gray-600">
             Not sure if we cover your area?{" "}
             <a
-              href="tel:01376297552"
+              href="tel:01376423462"
               className="font-bold text-blue-950 hover:text-yellow-600 underline underline-offset-4 transition-colors"
             >
-              Give us a call on 01376 297 552
+              Give us a call on 01376 423 462
             </a>
           </p>
         </section>
@@ -305,10 +309,10 @@ export default function App() {
             <p className="text-lg mt-1">
               Tel:{" "}
               <a
-                href="tel:01376297552"
+                href="tel:01376423462"
                 className="text-yellow-400 hover:text-yellow-300 font-bold"
               >
-                01376 297 552
+                01376 423 462
               </a>
             </p>
             <p className="text-lg mt-1">
