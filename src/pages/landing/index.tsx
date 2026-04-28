@@ -317,10 +317,10 @@ export default function App() {
             </p>
             <p className="text-lg mt-1">
               <a
-                href="mailto:essexmeals@btinternet.com"
+                href="mailto:hello@essexmealsonwheels.co.uk"
                 className="hover:text-white transition-colors"
               >
-                essexmeals@btinternet.com
+                hello@essexmealsonwheels.co.uk
               </a>
             </p>
             <p className="text-lg mt-1">
