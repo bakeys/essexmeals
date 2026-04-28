@@ -1,5 +1,9 @@
 import foodHygieneRating from "@/assets/foodhygienerating.svg";
 import logo from "@/assets/logo.png";
+import fish from "@/assets/food/fish.jpg";
+import pie from "@/assets/food/pie.jpg";
+import sausages from "@/assets/food/sausages.jpg";
+import foodDelivery from "@/assets/fooddelivery.png";
 
 const testimonials = [
   {
@@ -19,15 +23,6 @@ const testimonials = [
   },
 ];
 
-const links = [
-  { label: "Our Menu", desc: "See this week's meal choices", href: "#" },
-  { label: "How to Order", desc: "Getting started is simple", href: "#" },
-  { label: "Delivery Areas", desc: "Find out if we deliver to you", href: "#" },
-  { label: "About Us", desc: "Our story and our team", href: "#" },
-  { label: "Contact Us", desc: "Get in touch with us", href: "#" },
-  { label: "Privacy Policy", desc: "How we use your information", href: "#" },
-];
-
 const highlights = [
   { label: "Cooked fresh daily by a professional chef" },
   { label: "Delivered hot to your door, 7 days a week" },
@@ -35,6 +30,37 @@ const highlights = [
   { label: "5-star food hygiene rating" },
   { label: "Vegetarian and vegan options available" },
   { label: "Hot meal and dessert from just £8.50" },
+];
+
+const menuItems = [
+  {
+    img: fish,
+    title: "Battered Fish",
+    desc: "Golden battered fish fillet with creamy mashed potato and garden peas",
+  },
+  {
+    img: pie,
+    title: "Steak & Kidney Pie",
+    desc: "Rich, slow-cooked filling in a buttery shortcrust pastry with seasonal veg",
+  },
+  {
+    img: sausages,
+    title: "Pork Sausages",
+    desc: "Hearty Cumberland sausages with fluffy mash and thick onion gravy",
+  },
+];
+
+const deliveryAreas = [
+  "Witham",
+  "Braintree",
+  "Halstead",
+  "Maldon",
+  "Tiptree",
+  "Kelvedon",
+  "Coggeshall",
+  "Silver End",
+  "Hatfield Peverel",
+  "Wickham Bishops",
 ];
 
 export default function App() {
@@ -56,48 +82,75 @@ export default function App() {
 
       {/* Header */}
       <header
-        className="relative bg-blue-950 text-white"
+        className="text-white"
         style={{
-          backgroundImage: `linear-gradient(to right, rgba(15,27,50,0.95) 50%, rgba(15,27,50,0.6) 100%), url('https://images.unsplash.com/photo-1547592180-85f173990554?w=1400&q=80')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
+          background:
+            "linear-gradient(135deg, #0a1628 0%, #0f1b32 50%, #1a3a5c 100%)",
         }}
       >
-        <div className="max-w-5xl mx-auto px-6 py-20 md:py-28">
-          <p className="text-yellow-400 text-lg font-semibold uppercase tracking-widest mb-4">
-            Family-run since 1995
-          </p>
-          <div className="flex flex-row items-center">
-            <img src={logo} className="h-24 md:h-32 object-contain" />
-            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-              Essex Meals
-              <br />
-              On Wheels
-            </h1>
+        <div className="max-w-5xl mx-auto px-6 pt-12 pb-0 flex flex-col md:flex-row md:items-center gap-8">
+          {/* Left: text */}
+          <div className="flex-1 pb-10">
+            <div className="flex flex-row items-center mb-6">
+              <img
+                src={logo}
+                className="h-24 md:h-32 object-contain"
+                alt="Essex Meals on Wheels logo"
+              />
+              <div className="ml-4">
+                <p className="text-yellow-400 text-sm font-semibold uppercase tracking-widest mb-1">
+                  Family-run since 1995
+                </p>
+                <h1 className="text-5xl md:text-6xl font-bold leading-tight">
+                  Essex Meals
+                  <br />
+                  On Wheels
+                </h1>
+              </div>
+            </div>
+            <p className="text-blue-100 text-xl max-w-lg mb-3 leading-relaxed">
+              Fresh, nutritious meals delivered with care — cooked daily and
+              brought to your door by a friendly, trusted team.
+            </p>
+            <p className="text-blue-300 text-lg mb-8">
+              Hot meal and dessert from{" "}
+              <span className="text-white font-bold">£8.50</span> — seven days a
+              week
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="tel:01376297552"
+                className="btn btn-warning text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
+              >
+                Call: 01376 297 552
+              </a>
+              <a
+                href="#"
+                className="btn btn-outline text-white border-white hover:bg-white hover:text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
+              >
+                See Our Menu
+              </a>
+            </div>
           </div>
-
-          <p className="text-blue-100 text-2xl max-w-xl mb-4 leading-relaxed">
-            Fresh, nutritious meals delivered with care — cooked daily and
-            brought to your door by a friendly, trusted team.
-          </p>
-          <p className="text-blue-300 text-xl mb-10">
-            Hot meal and dessert from{" "}
-            <span className="text-white font-bold">£8.50</span> — delivered for
-            every day of the week
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <a
-              href="tel:01376297552"
-              className="btn btn-warning text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
-            >
-              Call: 01376 297 552
-            </a>
-            <a
-              href="#"
-              className="btn btn-outline text-white border-white hover:bg-white hover:text-blue-950 font-bold text-xl px-8 py-4 h-auto rounded-none"
-            >
-              See Our Menu
-            </a>
+          <div className="hidden md:block shrink-0">
+            <div className="relative" style={{ padding: "10px 0 0 10px" }}>
+              {/* Offset border behind the image */}
+              <div
+                className="absolute inset-0"
+                style={{
+                  border: "3px solid #eab308",
+                  top: 0,
+                  left: 0,
+                  right: "10px",
+                  bottom: "-10px",
+                }}
+              />
+              <img
+                src={foodDelivery}
+                alt="Friendly delivery driver with a hot meal"
+                className="relative h-96 w-auto object-contain object-bottom block"
+              />
+            </div>
           </div>
         </div>
       </header>
@@ -138,32 +191,81 @@ export default function App() {
           </p>
         </section>
 
-        {/* Navigation links */}
-        <section className="w-full max-w-4xl ">
-          <h2 className="text-2xl font-bold text-blue-950 mb-6 border-b-2 border-gray-300 pb-3">
-            Find Out More
+        {/* Food photo showcase */}
+        <section className="w-full max-w-4xl">
+          <h2 className="text-2xl font-bold text-blue-950 mb-1 border-b-2 border-gray-300 pb-3">
+            A Taste of What We Serve
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {links.map(({ label, desc, href }) => (
-              <a
-                key={label}
-                href={href}
-                className="group flex items-center justify-between bg-gray-50 border border-gray-300 hover:bg-blue-950 hover:border-blue-950 p-5 transition-colors duration-150"
+          <p className="text-gray-500 text-base mt-4 mb-6">
+            Every meal is freshly cooked and delivered piping hot to your door.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 border border-gray-300">
+            {menuItems.map(({ img, title, desc }, i) => (
+              <div
+                key={title}
+                className={`flex flex-col${
+                  i < menuItems.length - 1
+                    ? " sm:border-r border-b sm:border-b-0 border-gray-300"
+                    : ""
+                }`}
               >
-                <div>
-                  <p className="text-xl font-bold text-blue-950 group-hover:text-white">
-                    {label}
+                <div className="overflow-hidden" style={{ height: "220px" }}>
+                  <img
+                    src={img}
+                    alt={title}
+                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="bg-white p-5 flex-1">
+                  <p className="text-lg font-bold text-blue-950 mb-1">
+                    {title}
                   </p>
-                  <p className="text-base text-gray-500 group-hover:text-blue-200 mt-0.5">
+                  <p className="text-base text-gray-600 leading-relaxed">
                     {desc}
                   </p>
                 </div>
-                <span className="text-2xl text-gray-300 group-hover:text-white font-bold ml-4">
-                  &#8250;
-                </span>
-              </a>
+              </div>
             ))}
           </div>
+          <div className="mt-4 text-right">
+            <a
+              href="#"
+              className="text-base font-bold text-blue-950 hover:text-yellow-600 transition-colors underline underline-offset-4"
+            >
+              View full menu &rsaquo;
+            </a>
+          </div>
+        </section>
+
+        {/* Delivery Areas */}
+        <section className="w-full max-w-4xl">
+          <h2 className="text-2xl font-bold text-blue-950 mb-1 border-b-2 border-gray-300 pb-3">
+            Delivery Areas
+          </h2>
+          <p className="text-gray-500 text-base mt-4 mb-6">
+            We currently deliver across mid-Essex, seven days a week. If you
+            don't see your town listed, please call us — we may still be able to
+            help.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+            {deliveryAreas.map((area) => (
+              <div
+                key={area}
+                className="border border-gray-300 bg-gray-50 px-4 py-3 text-base font-semibold text-blue-950 text-center"
+              >
+                {area}
+              </div>
+            ))}
+          </div>
+          <p className="mt-6 text-base text-gray-600">
+            Not sure if we cover your area?{" "}
+            <a
+              href="tel:01376297552"
+              className="font-bold text-blue-950 hover:text-yellow-600 underline underline-offset-4 transition-colors"
+            >
+              Give us a call on 01376 297 552
+            </a>
+          </p>
         </section>
 
         {/* Testimonials */}
