@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+@import "tailwindcss";
+
+@plugin "daisyui" {
+  themes: all;
+}
+
+@plugin "daisyui/theme" {
+  name: "essex";
+  default: true;
+
+  --color-primary: #911d29;
+  --color-primary-content: #f0e6ca;
+  --color-secondary: #c8972a;
+  --color-secondary-content: #1e3d2a;
+  --color-accent: #6b4226;
+  --color-accent-content: #f0e6ca;
+  --color-neutral: #2c2c2c;
+  --color-neutral-content: #f0e6ca;
+  --color-base-100: #fdf6e9;
+  --color-base-200: #f5e9ca;
+  --color-base-300: #e2d4b0;
+  --color-base-content: #2c2c2c;
+  --color-info: #3b82f6;
+  --color-success: #1a6b31;
+  --color-success-content: #f0e6ca;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  --font-display: "Merriweather", sans-serif;
+}
