@@ -37,7 +37,7 @@ const menuItems = [
   {
     img: fish,
     title: "Battered Fish",
-    desc: "Golden battered fish fillet with creamy mashed potato and garden peas",
+    desc: "Golden battered fish fillet with handcut chips and garden peas",
   },
   {
     img: pie,
