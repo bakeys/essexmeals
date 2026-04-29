@@ -95,7 +95,7 @@ export default function App() {
             <div className="flex flex-row items-center mb-6">
               <img
                 src={logo}
-                className="h-24 md:h-32 object-contain"
+                className="h-24 md:h-32 object-contain hidden lg:block"
                 alt="Essex Meals on Wheels logo"
               />
               <div className="ml-4">
